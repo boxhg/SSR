@@ -20,7 +20,7 @@ def parse(ssr):
 
         return server
    except:
-       print("解析失败")
+       print("parse fail")
        return None
         
 
@@ -29,7 +29,7 @@ def parse_ss(base64_encode_str):
    decode_str = base64_decode(base64_encode_str)
    parts = decode_str.split(':')
    if len(parts) != 3:
-       print('不能解析SS链接: %s' % base64_encode_str)
+       print('can''t pass SS-Link: %s' % base64_encode_str)
        return
    method = parts[0]
    password_and_ip = parts[1]
@@ -39,7 +39,7 @@ def parse_ss(base64_encode_str):
    password = pass_and_server[0]
    server = pass_and_server[1]
 
-   print('加密方法: %s, 密码: %s, server: %s, port: %s' % (method, password, server, port))
+   print('Crypt: %s, password: %s, server: %s, port: %s' % (method, password, server, port))
    return server
 
 def parse_ssr(base64_encode_str):
@@ -47,7 +47,7 @@ def parse_ssr(base64_encode_str):
    print("decode_str:",decode_str)
    parts = decode_str.split(':')
    if len(parts) != 6:
-       print('不能解析SSR链接: %s' % base64_encode_str)
+       print('can''t pass SSR-Link: %s' % base64_encode_str)
        return
 
    server = parts[0]
@@ -63,9 +63,30 @@ def parse_ssr(base64_encode_str):
    password = base64_decode(password_encode_str)
    print("password:",password)
 
-   print('server: %s, port: %s, 协议: %s, 加密方法: %s, 密码: %s, 混淆: %s'
+   print('server: %s, port: %s, proto: %s, crypt: %s, password: %s, obfs: %s'
        % (server, port, protocol, method, password, obfs))
    return server
+
+def update_ssr_group(ssr,groupname):
+   if ssr.startswith('ssr://'):
+      base64_encode_str = ssr[6:]
+   else:
+      return
+
+   decode_str = base64_decode(base64_encode_str)
+   parts = decode_str.split('/?')
+   if len(parts) != 2:
+       print('can''t pass SSR-Link: %s' % base64_encode_str)
+       return
+
+   sparam =parts[1]
+   new_group = base64.urlsafe_b64encode(groupname.encode('utf-8')).decode("utf-8")
+   new_sparam = sparam.replace("V1dXLlNTUlRPT0wuQ09N", new_group)
+   
+   server = parts[0] + '/?'+new_sparam
+   new_server = 'ssr://'+ base64.urlsafe_b64encode(server.encode('utf-8')).decode("utf-8")
+
+   return new_server   
 
 def fill_padding(base64_encode_str):
 
@@ -83,7 +104,7 @@ def base64_decode(base64_encode_str):
 
 
 if __name__ == '__main__':
-   ssr = input("输入SS或者SSR:")
+   ssr = input("Input SS or SSR:")
 
    IP = parse(ssr)
    get_ping_result(IP)

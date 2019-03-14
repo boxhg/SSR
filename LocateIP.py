@@ -7,7 +7,22 @@ Created on Tue Feb 26 10:21:49 2019
 import requests
 import re
 from pyquery import PyQuery as pq
+import json
 
+def QueryIPJson(IP):
+    try:
+        if IP == None:
+            return
+        url = 'http://ip-api.com/json/'+str(IP)+'?lang=en'
+        response = requests.get(url)
+        response.encoding = 'utf8'
+        html = response.text
+        ipjson = json.loads(html)
+        print("Location:",ipjson['country'])
+        return ipjson
+    except:
+        print("Location IP Fail")
+        
 def LocateIP(IP):
     try:
         if IP == None:
@@ -22,12 +37,13 @@ def LocateIP(IP):
         temp = doc('body div div div:nth-child(4) .shenlansezi')
         #print(temp)
         location=re.findall(".*zi\">(.*?)<",str(temp))[0]
-        print("位置:",location)
+        print("Location:",location)
         return location
     except:
-        print("定位IP失败")
+        print("Location IP Fail")
 
         
 if __name__ == '__main__':
     IP = '144.34.158.30'
-    LocateIP(IP)
+    #LocateIP(IP)
+    QueryIPJson(IP)
