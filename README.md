@@ -1,3 +1,21 @@
+# Data from WWW.SSRTOOL.COM
+
+Free ShadowsocksR/V2ray Subscribe https://github.com/AmazingDM/sub
+- SSR: `https://raw.githubusercontent.com/AmazingDM/sub/master/ssrshare.com`
+- V2ray: `https://raw.githubusercontent.com/AmazingDM/sub/master/v2ray_ssrshare.com`
+
+# Free ShadowsocksR/V2ray, 
+United States: 12 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/United States.txt`
+Canada: 6 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Canada.txt`
+Singapore: 7 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Singapore.txt`
+Russia: 16 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Russia.txt`
+Australia: 4 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Australia.txt`
+Germany: 1 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Germany.txt`
+Japan: 15 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Japan.txt`
+China: 7 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/China.txt`
+
+> IP location data from `http://www.ip-api.com/`
+
 # ss和ssr链接解析
 
 ## ss解析
