@@ -1,13 +1,12 @@
-United States: 12 
-Canada: 6 
-Singapore: 7 
-Russia: 16 
-Greece: 1 
-Australia: 4 
-Germany: 1 
-Japan: 15 
-China: 7 
-India: 1 
+Canada: 8 
+Australia: 2 
 Turkey: 1 
-United Kingdom: 1 
+Russia: 16 
+China: 7 
+Taiwan: 3 
+India: 1 
 France: 1 
+Japan: 10 
+Singapore: 6 
+United States: 11 
+United Kingdom: 2 
