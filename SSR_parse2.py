@@ -80,11 +80,13 @@ def update_ssr_group(ssr,groupname):
        return
 
    sparam =parts[1]
-   new_group = base64.urlsafe_b64encode(groupname.encode('utf-8')).decode("utf-8")
+   # new_group = base64.urlsafe_b64encode(groupname.encode('utf-8')).decode("utf-8")
+   new_group = base64_encode(groupname)
    new_sparam = sparam.replace("V1dXLlNTUlRPT0wuQ09N", new_group)
    
    server = parts[0] + '/?'+new_sparam
-   new_server = 'ssr://'+ base64.urlsafe_b64encode(server.encode('utf-8')).decode("utf-8")
+   # new_server = 'ssr://'+ base64.urlsafe_b64encode(server.encode('utf-8')).decode("utf-8")
+   new_server = 'ssr://'+ base64_encode(server)
 
    return new_server   
 
@@ -102,10 +104,31 @@ def base64_decode(base64_encode_str):
    base64_encode_str = fill_padding(base64_encode_str)
    return base64.urlsafe_b64decode(base64_encode_str).decode('utf-8')
 
+def base64_encode(encode_str):
+   base64_encode_str = base64.urlsafe_b64encode(encode_str.encode('utf-8')).decode("utf-8")
+   b_str= base64_encode_str.strip(r'=+')
+
+   return b_str
+
 
 if __name__ == '__main__':
-   ssr = input("Input SS or SSR:")
+   # ssr = input("Input SS or SSR:")
 
-   IP = parse(ssr)
+   text = "SSR_Germany"
+   print(base64_encode(text))
+
+   print(base64.encodestring(text.encode('utf-8')).decode('utf-8'))
+   print(base64.urlsafe_b64encode(text.encode('utf-8')).decode('utf-8'))  
+   print(base64.standard_b64encode(text.encode('utf-8')).decode('utf-8'))
+   print(base64.b64encode(text.encode('utf-8')).decode('utf-8'))
+
+   ssr = "ssr://MTQyLjkzLjEwMy45MzozNDc2NjphdXRoX3NoYTFfdjQ6YWVzLTI1Ni1jZmI6cGxhaW46ZEdWc1pXZHlZVzFBWm5KbFpUTTBOdy8_cmVtYXJrcz1VMU5TVkU5UFRGX2x2cmZsbTcwdFNHVnpjMlU2TkRjJmdyb3VwPVYxZFhMbE5UVWxSUFQwd3VRMDlO"
+   update_ssr_group = update_ssr_group(ssr,'SSR_China')
+
+   print(update_ssr_group)
+
+
+   IP = parse(update_ssr_group)
    get_ping_result(IP)
    LocateIP(IP)
+
