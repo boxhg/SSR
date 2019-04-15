@@ -12,7 +12,7 @@ import requests
 import base64
 
 SSRShare_TXT = "ssr/ssrshare.com"
-SSRShare_CC_TXT = "ssr/ssrshare.com.txt"
+SSRShare_CC_TXT = "ssrshare.com.md"
 
 #log
 class Logger(object):
@@ -124,9 +124,13 @@ def paser_github():
         
         sscctxt = open(SSRShare_CC_TXT,'w')
         for item in country_set:
-            msg = "{0}: {1} \n".format(item,country.count(item))
+            msg = "- {0}: {1} \n".format(item,country.count(item))
             print(msg+"\n")
             sscctxt.write(msg)
+
+            ssr_url = "https://raw.githubusercontent.com/boxhg/SSR/master/ssr/"+item+".txt"
+            ssr_url_msg = "`"+ssr_url+"`\r\n"       
+            sscctxt.write(ssr_url_msg)                         
 
             update_ssrlines_country(item,country_ss[item])
         sscctxt.close()
@@ -134,6 +138,29 @@ def paser_github():
     except Exception as e:
         print('Error:',e)
 
+def update_readme():
+    
+    readme1_md = open("readme1.md","r")
+    readme1_txt = readme1_md.readlines()
+    readme1_md.close()
+
+    ssrshare_md = open(SSRShare_CC_TXT,"r")
+    ssrshare1_txt = ssrshare_md.readlines()
+    ssrshare_md.close()
+
+    readme_md = open("README.md",'w')
+    readme_md.writelines(readme1_txt)
+    readme_md.writelines(ssrshare1_txt)
+
+    readme_md.write("\r\n\r\n")
+    readme_md.write("IP location data from `http://www.ip-api.com/`")
+
+    #readme_md.write("# ss和ssr链接解析\r\n")
+    #readme_md.write("https://raw.githubusercontent.com/boxhg/SSR/master/ssr/readme0.md")
+    
+    readme_md.close()
+    
 if __name__ == '__main__': 
-    # update_ssr()
+    #update_ssr()
     paser_github()
+    update_readme()
