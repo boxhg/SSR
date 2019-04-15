@@ -1,10 +1,14 @@
-Taiwan: 3 
-South Korea: 2 
-Singapore: 1 
-China: 2 
+Japan: 19 
+China: 5 
+India: 2 
+Russia: 12 
+Netherlands: 1 
+Canada: 7 
+United States: 37 
+Germany: 1 
+Australia: 1 
+United Kingdom: 4 
+Singapore: 14 
 France: 1 
-United States: 6 
-Japan: 3 
-Greece: 2 
-Canada: 1 
-Russia: 7 
+South Korea: 3 
+Lithuania: 1 
