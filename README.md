@@ -5,47 +5,47 @@ Free ShadowsocksR/V2ray Subscribe https://github.com/AmazingDM/sub
 - V2ray: `https://raw.githubusercontent.com/AmazingDM/sub/master/v2ray_ssrshare.com`
 
 # Free SSR Server grouped by country
-- Russia: 12 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Russia.txt`
+- Japan: 16 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Japan.txt`
 
-- China: 5 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/China.txt`
+- Canada: 4 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Canada.txt`
+
+- Singapore: 12 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Singapore.txt`
 
 - India: 2 
 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/India.txt`
 
-- Singapore: 14 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Singapore.txt`
+- Taiwan: 2 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Taiwan.txt`
 
-- United States: 37 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/United States.txt`
-
-- South Korea: 3 
+- South Korea: 2 
 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/South Korea.txt`
-
-- Netherlands: 1 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Netherlands.txt`
-
-- France: 1 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/France.txt`
-
-- Germany: 1 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Germany.txt`
-
-- Canada: 7 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Canada.txt`
 
 - United Kingdom: 4 
 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/United Kingdom.txt`
 
-- Lithuania: 1 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Lithuania.txt`
+- Hong Kong: 1 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Hong Kong.txt`
 
-- Australia: 1 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Australia.txt`
+- China: 5 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/China.txt`
 
-- Japan: 19 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Japan.txt`
+- Germany: 2 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Germany.txt`
+
+- France: 1 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/France.txt`
+
+- Russia: 11 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Russia.txt`
+
+- United States: 23 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/United States.txt`
+
+- Netherlands: 3 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Netherlands.txt`
 
 
 
