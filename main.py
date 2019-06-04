@@ -10,9 +10,11 @@ from PingIP import get_ping_result
 from LocateIP import QueryIPJson
 import requests
 import base64
+import os
 
 SSRShare_TXT = "ssr/ssrshare.com"
 SSRShare_CC_TXT = "ssrshare.com.md"
+IP_DICT_TXT = 'IPDict.txt'
 
 #log
 class Logger(object):
@@ -26,6 +28,20 @@ class Logger(object):
         pass
 sys.stdout = Logger("data/result.txt") 
 #下面所有的方法，只要控制台输出，都将写入"result.txt"
+
+def save_dict_to_file(dic):
+    f = open(IP_DICT_TXT,'w')
+    f.write(str(dic))
+    f.close()
+
+def load_dict_from_file():
+    if(os.path.exists(IP_DICT_TXT)):
+        f = open(IP_DICT_TXT,'r')
+        data=f.read()
+        f.close()
+        return eval(data)
+    else:
+        return {}
 
 
 def paser_data():
@@ -97,6 +113,8 @@ def paser_github():
     html = ssrshare.readlines()
     ssrshare.close()
 
+    ipdict = load_dict_from_file()
+
     decode_str = base64_decode(html[0])
     try:
         country=[]
@@ -106,8 +124,13 @@ def paser_github():
         for line in lines: 
             
             IP = parse(line)
+            
+            if(IP in ipdict):
+                location = ipdict[IP]
+            else:                
+                location = QueryIPJson(IP)
+                ipdict[IP] = location
 
-            location = QueryIPJson(IP)
             if(location != None):
                 country_code = location['country']
                 country.append(country_code)
@@ -119,6 +142,8 @@ def paser_github():
                     country_lines=[line]
                     country_ss[country_code] = country_lines
             
+       
+        save_dict_to_file(ipdict)
 
         country_set = set(country) 
         
