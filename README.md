@@ -5,38 +5,35 @@ Free ShadowsocksR/V2ray Subscribe https://github.com/AmazingDM/sub
 - V2ray: `https://raw.githubusercontent.com/AmazingDM/sub/master/v2ray_ssrshare.com`
 
 # Free SSR Server grouped by country
-- Singapore: 5 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Singapore.txt`
+- Hong Kong: 6 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Hong Kong.txt`
 
-- United Kingdom: 13 
+- United Kingdom: 14 
 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/United Kingdom.txt`
 
-- Russia: 12 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Russia.txt`
+- Vietnam: 1 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Vietnam.txt`
 
-- Germany: 5 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Germany.txt`
+- Hungary: 1 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Hungary.txt`
 
-- China: 1 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/China.txt`
-
-- Canada: 2 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Canada.txt`
-
-- Japan: 80 
+- Japan: 92 
 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Japan.txt`
 
 - Taiwan: 1 
 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Taiwan.txt`
 
-- Netherlands: 1 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Netherlands.txt`
+- China: 1 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/China.txt`
 
-- India: 2 
-`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/India.txt`
+- Canada: 1 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Canada.txt`
 
-- United States: 43 
+- United States: 35 
 `https://raw.githubusercontent.com/boxhg/SSR/master/ssr/United States.txt`
+
+- Russia: 10 
+`https://raw.githubusercontent.com/boxhg/SSR/master/ssr/Russia.txt`
 
 
 
