@@ -10,6 +10,7 @@ from LocateIP import LocateIP
 
 def parse(ssr):
    try:
+        server = None
         if ssr.startswith('ss://'):
            base64_encode_str = ssr[5:]
            server = parse_ss(base64_encode_str)

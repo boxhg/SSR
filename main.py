@@ -30,9 +30,15 @@ sys.stdout = Logger("data/result.txt")
 #下面所有的方法，只要控制台输出，都将写入"result.txt"
 
 def save_dict_to_file(dic):
-    f = open(IP_DICT_TXT,'w')
-    f.write(str(dic))
-    f.close()
+
+    try:
+        ipstr = str(dic)
+        f = open(IP_DICT_TXT,'w',encoding='utf-8')  
+        f.write(ipstr)
+        f.close()
+    except expression as e:
+        print(e)
+    
 
 def load_dict_from_file():
     if(os.path.exists(IP_DICT_TXT)):
@@ -121,9 +127,11 @@ def paser_github():
         country_ss={}
         lines=decode_str.split('\n')
 
-        for line in lines: 
-            
+        for line in lines:   
+
             IP = parse(line)
+            if(IP == None):
+                continue
             
             if(IP in ipdict):
                 location = ipdict[IP]
@@ -142,8 +150,8 @@ def paser_github():
                     country_lines=[line]
                     country_ss[country_code] = country_lines
             
-       
-        save_dict_to_file(ipdict)
+        if(len(ipdict)>0):
+            save_dict_to_file(ipdict)
 
         country_set = set(country) 
         
